@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 命名空间的作用： 需要配置mapper接口的路径-->
+<mapper namespace="cn.lisheng.showpicture.dao.mapper.DemoMapper">
+
+	<!-- 根据用户id查询用户信息
+	每次查询出一条用户信息记录
+	 -->
+	 <select id="findDemoById" parameterType="int"
+	 resultType="demo"
+	 >
+	    select * from demo where id=#{id}
+	 </select>
+	 
+	 <!-- 插入用户 -->
+	 <insert id="insertDemo" parameterType="demo">
+	 <!-- 主键返回 -->
+	 <selectKey keyProperty="id" order="AFTER" resultType="int">
+	 select LAST_INSERT_ID()
+	 </selectKey>
+	 insert into demo(id,name)values(#{id},#{name})
+	 </insert>
+	 
+</mapper>

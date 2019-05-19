@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	
+	<!-- 设置全局参数 -->
+<!-- 	<settings> -->
+		<!-- lazyLoadingEnabled：延迟加载的开关，默认是false -->
+<!-- 		<setting name="lazyLoadingEnabled" value="true"/> -->
+		<!-- aggressiveLazyLoading：默认为true，一旦为true上面的懒加载开关失效 -->
+<!-- 		<setting name="aggressiveLazyLoading" value="false"/> -->
+		
+		<!-- cacheEnabled：二级缓存的总开关 默认是false-->
+<!-- 		<setting name="cacheEnabled" value="true"/> -->
+<!-- 	</settings> -->
+	
+	<!-- 定义别名 -->
+	<typeAliases>
+		<!-- 批量定义别名 -->
+		<!-- name：指定需要别名定义的包的名称 它的别名就是类名（类名的首字母大小写都可）-->
+		<package name="cn.lisheng.showpicture.po"></package>
+	</typeAliases>
+	
+	<!-- mapper配置 -->
+<!-- 	<mappers> -->
+		<!--针对单个mapper.xml进行配置 -->
+<!-- 		<mapper resource="cn/itcast/ssm/dao/old/User.xml" /> -->
+		<!-- 针对单个mapper.java配置 规则：mapper.xml和mapper.java放在一个目录且文件名相同 -->
+		<!-- <mapper class="cn.itcast.mybatis.dao.mapper.UserMapper"/> -->
+		<!-- 指定mapper接口所在包，对包下的mapper接口批量配置 -->
+<!-- 		<package name="cn.lisheng.showpicture.dao.mapper" /> -->
+
+<!-- 	</mappers> -->
+
+</configuration>
